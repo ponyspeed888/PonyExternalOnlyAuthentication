@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@using System.Security.Claims
+@using Microsoft.Extensions.Configuration
+
+
+<ul class="navbar-nav">
+
+
+@if (User.Identity.Name != null)
+{
+    <li class="nav-item">
+        <a  class="nav-link text-dark" asp-controller="GoogleOnly" asp-action="MyDetail" title="Manage">Hello @User.Identity.Name!</a>
+    </li>
+
+    <li>
+            @if (User.HasClaim (x => x.Type == "urn:google:picture") )
+            {
+
+                <img style="width:32px;height:32px;" src="@(User.Claims.First (x => x.Type == "urn:google:picture").Value.ToString ())"  >
+            }
+         
+   
+    </li>
+
+    <li class="nav-item">
+        <form  class="form-inline" asp-controller="GoogleOnly" asp-action="Logout"  asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+        </form>
+    </li>
+}
+else
+{
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-controller="GoogleOnly" asp-action="Login" >Login</a>
+    </li>
+
+    
+}
+</ul>
+
