@@ -1,5 +1,5 @@
 
-This project is a demonstrate asp.net core app that does not keep a user identity database, but rely on external authentication provider for user authentication.  The common use case is site that allow user to comment or contact you without register an account first.  This demon only show google authentication.  It does not produce nuget package because it only support asp.net core mvc, if you use Razor Page or many likely usage (like add Facebook provider) scenerios require modification of the source code, 
+This project demonstrate asp.net core app that does not keep a user identity database, but rely on external authentication provider for user authentication.  The common use case is site that allow user to comment or contact you without register an account first.  This demon only show google authentication.  It does not produce nuget package because it only support asp.net core mvc, if you use Razor Page or many likely usage (like add Facebook provider) scenerios require modification of the source code, 
 
 How to use :
 
