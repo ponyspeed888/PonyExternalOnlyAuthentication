@@ -15,7 +15,7 @@ How to use :
 
 
             });
-4. Add the following to Config
+4. Add the following to Configure
 
           app.UseRouting();
 
@@ -33,12 +33,12 @@ https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/soci
 https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/additional-claims?view=aspnetcore-5.0
 
 
-Only a few things require explainations here 
+Only a few things require explanations here 
 
-1. this line will force the select user account screen to appear with every login,  if it is not there, google will signin silently if the user already login to google previous.  This leave user no chance to change login account
+1. this line in GoogleOnlyAuthenticationExtension will force the select user account screen to appear with every login,  if it is not there, google will signin silently if the user already logged in to google previous.  This leave user no chance to change login account
 
                options.AuthorizationEndpoint += "?prompt=consent";
 
-2. PonyGoogleOnlyAuthentication is implemented as Razor class library, reference link:
+2. PonyGoogleOnlyAuthentication is implemented as Razor class library, this is the mechanism that allows your to only add code in 3 places and have a fully functional Google Authentication. Reference link:
 
 https://docs.microsoft.com/en-us/aspnet/core/razor-pages/ui-class?view=aspnetcore-5.0&tabs=visual-studio
