@@ -1,11 +1,19 @@
 
-This project demonstrate asp.net core app that does not keep a user identity database, but rely on external authentication provider for user authentication.  The common use case is site that allow user to comment or contact you without register an account first.  This demon only show google authentication.  It does not produce nuget package because it only support asp.net core mvc, if you use Razor Page or many likely usage (like add Facebook provider) scenerios require modification of the source code, 
+This project demonstrate asp.net core app that does not keep a user identity database, but rely on external authentication provider for user authentication.  The common use case is site that allow user to comment or contact you without register an account first.  Please note it use NuGet packages that only support asp.net core mvc, and only single external ID provider only, in order to simplfied the implementation. This limit the usefulness in commerical app, but is very good as a starting learning package for external authentication, because once you have the clientID and ClientSecret right, it has very little room for error for beginner.
+
+
+Currently, it support Google, Microsoft, Github providers
 
 How to use :
 
 1. Create a asp.net core mvc app WITHOUT authentication
 2. Add project reference to PonyGoogleOnlyAuthentication
 3. Add the following code to ConfigureServices
+
+        services.AddGoogleOnlyAuthenticationBasic("Your Client ID", "Your Client Secret") ;
+
+    or use the full option    
+
 
         services.AddGoogleOnlyAuthentication( options =>
             {
@@ -23,7 +31,13 @@ How to use :
 
 5. Add this line to Views/Shared/_Layout.cshtml  to show the login/logout ui
 
-    <partial name="_LoginPartialGoogle" />
+    <partial name="_LoginPartialSingleExtOnly" />
+
+6. For other providers, use
+
+    services.AddMicrosoftOnlyAuthenticationBasic
+    services.AddGithubOnlyAuthenticationBasic
+
 
 
 The following link explain the detail implementation

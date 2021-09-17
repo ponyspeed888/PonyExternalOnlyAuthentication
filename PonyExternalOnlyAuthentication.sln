@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PonyExternalOnlyAuthentication", "PonyExternalOnlyAuthentication\PonyExternalOnlyAuthentication.csproj", "{40D13E9A-42C3-4FCD-AC96-E05499C0F532}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PonyGoogleOnlyAuthentication", "PonyGoogleOnlyAuthentication\PonyGoogleOnlyAuthentication.csproj", "{0EB1C2F7-92EA-44E1-8747-E9DD1A58EDD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PonyExternalOnlyAuthentication", "PonyExternalOnlyAuthentication\PonyExternalOnlyAuthentication.csproj", "{40D13E9A-42C3-4FCD-AC96-E05499C0F532}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{40D13E9A-42C3-4FCD-AC96-E05499C0F532}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40D13E9A-42C3-4FCD-AC96-E05499C0F532}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40D13E9A-42C3-4FCD-AC96-E05499C0F532}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0EB1C2F7-92EA-44E1-8747-E9DD1A58EDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0EB1C2F7-92EA-44E1-8747-E9DD1A58EDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0EB1C2F7-92EA-44E1-8747-E9DD1A58EDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0EB1C2F7-92EA-44E1-8747-E9DD1A58EDD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

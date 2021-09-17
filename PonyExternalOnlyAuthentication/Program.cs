@@ -20,6 +20,8 @@ namespace PonyExternalOnlyAuthentication
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseUrls("http://*:5000", "https://*:44300");
+
                     webBuilder.UseStartup<Startup>();
                 });
     }

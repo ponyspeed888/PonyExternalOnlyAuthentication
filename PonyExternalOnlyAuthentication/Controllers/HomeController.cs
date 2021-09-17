@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PonyExternalOnlyAuthentication.Models;
+using PonyGoogleOnlyAuthentication;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -17,6 +18,17 @@ namespace PonyExternalOnlyAuthentication.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+        }
+
+
+        //[Authorize(AuthenticationSchemes ="Bearer") ]
+        //[Authorize]
+        //[AuthorizeJWT]
+        [AuthorizeBoth]
+        public string jwttest()
+        {
+
+            return DateTime.Now.ToString();
         }
 
         public IActionResult Index()

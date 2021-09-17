@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PonyGoogleOnlyAuthentication\PonyGoogleOnlyAuthentication.csproj" />
+    <PackageReference Include="PonyGoogleOnlyAuthentication" Version="1.0.0-alpha3" />
   </ItemGroup>
 
 </Project>

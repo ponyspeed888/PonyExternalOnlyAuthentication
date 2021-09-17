@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PonyGithubOnlyAuthentication;
 using PonyGoogleOnlyAuthentication;
+using PonyMicrosoftOnlyAuthentication;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,15 +28,12 @@ namespace PonyExternalOnlyAuthentication
         {
             services.AddControllersWithViews();
 
-            services.AddGoogleOnlyAuthentication(options =>
-            {
-                // options is GoogleOptions class, exactly the same options as        .AddGoogle(opt)
+            services.AddGoogleOnlyAuthenticationBasic(
+                "yourid",
+                "yoursecret"
 
-                options.ClientId = "YourClientId";
-                options.ClientSecret = "YourClientSecret";
+            );
 
-
-            });
 
         }
 
@@ -51,7 +50,7 @@ namespace PonyExternalOnlyAuthentication
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
