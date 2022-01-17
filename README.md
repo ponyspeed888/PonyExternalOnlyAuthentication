@@ -1,3 +1,5 @@
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fponyspeed888%2FPonyExternalOnlyAuthentication&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
 
 This project demonstrate asp.net core app that does not keep a user identity database, but rely on external authentication provider for user authentication.  The common use case is site that allow user to comment or contact you without register an account first.  Please note it use NuGet packages that only support asp.net core mvc, and only single external ID provider only, in order to simplfied the implementation. This limit the usefulness in commerical app, but is very good as a starting learning package for external authentication, because once you have the clientID and ClientSecret right, it has very little room for error for beginner.
 
